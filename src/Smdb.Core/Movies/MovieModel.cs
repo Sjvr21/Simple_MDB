@@ -7,7 +7,7 @@ public class Movie
     public string Description { get; set; }
     public Movie(int id, string title, int year, string description)
     {
-        Id = id;
+        Id = id; 
         Title = title;
         Year = year;
         Description = description;

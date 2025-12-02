@@ -13,7 +13,7 @@ public class App : HttpServer
         var movieServ = new DefaultMovieService(movieRepo);
         var movieCtrl = new MoviesController(movieServ);
         var movieRouter = new MoviesRouter(movieCtrl);
-        var apiRouter = new HttpRouter()
+        var apiRouter = new HttpRouter();
 
         router.Use(HttpUtils.StructuredLogging);
         router.Use(HttpUtils.CentralizedErrorHandling);

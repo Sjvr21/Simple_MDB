@@ -4,7 +4,7 @@ public class App : HttpServer
 {
     public App()
     {
-        
+
     }
     public override void Init()
     {
@@ -16,6 +16,7 @@ public class App : HttpServer
         router.Use(HttpUtils.ParseRequestQueryString);
         router.Use(HttpUtils.ServeStaticFiles);
         router.UseSimpleRouteMatching();
+        
         router.MapGet("/", async (req, res, props, next) =>
         { res.Redirect("/index.html"); await next(); });
         router.MapGet("/movies", async (req, res, props, next) =>

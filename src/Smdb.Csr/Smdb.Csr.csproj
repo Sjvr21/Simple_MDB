@@ -4,6 +4,11 @@
     <ProjectReference Include="..\..\..\SharedLibrary\src\Shared\Shared.csproj" />
     <ProjectReference Include="..\Smdb.Core\Smdb.Core.csproj" />
     <ProjectReference Include="..\Smdb.Api\Smdb.Api.csproj" />
+    
+    <Content Include="wwwroot\**\*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+
   </ItemGroup>
 
   <PropertyGroup>
